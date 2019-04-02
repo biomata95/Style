@@ -1,0 +1,82 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<meta charset="utf-8">
+<style type="text/css">
+  #t1{
+    resize:none;
+    background-color: #efefef;
+  }
+  #t2{
+    resize:none;
+  }
+  #t3{
+    resize:none;
+    background-color: #efefef;
+  }
+  #t4{
+    resize:none;
+  }
+</style>
+<style>
+#faketextarea {
+  border: 2px solid #215297;
+}
+
+input[type="text"],
+select.form-control-de {
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+label{
+  font-size: 13px;
+}
+
+hr{
+  border-top: 1px #8c8b8b;
+}
+
+input[type="text"]:focus,
+select.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+</style>
+<form>
+<div id=faketextarea style="width:297">
+
+<div class="form-group">
+  <label>De:</label>
+  <input type="text" name="name" class="form-control" id="name" style="width:264">
+  <hr>
+  <label>Para:</label>
+  <input type="text" name="name1" class="form-control" id="name1" style="width:250">
+  <hr>
+  <label>Cc:</label>
+  <input type="text" name="name1" class="form-control" id="name1" style="width:250">
+  <hr>
+  <label>Bcc:</label>
+  <input type="text" name="name1" class="form-control" id="name1" style="width:250">
+  <hr>
+  <label>Titulo:</label>
+  <input type="text" name="name2" class="form-control" id="name2" style="width:240">
+</div>
+
+
+<textarea id=t1 readonly style="border:0; overflow: auto;" cols=40 rows=1>Este é o cabeçalho da mensagem.</textarea>
+<BR>
+<textarea id=t2 style="border:0; overflow: auto;" cols=40 rows=10></textarea>
+<BR>
+<textarea id=t3 readonly style="border:0; overflow: auto;" cols=40 rows=1>Este é o rodape da mensagem.</textarea>
+</div>
+<BR>
+<input type=button value="Merge Results" onclick="this.form.t4.value=this.form.t1.value+'\n\n'+this.form.t2.value+'\n\n'+this.form.t3.value;"/>
+<BR>
+<textarea id=t4 readonly="" cols=40 rows=10></textarea>
+</form>
+
+
+
